@@ -1,0 +1,7 @@
+parameters:
+#    open_scrum_info.example.class: OpenScrum\InfoBundle\Example
+
+services:
+#    open_scrum_info.example:
+#        class: %open_scrum_info.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

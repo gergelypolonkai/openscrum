@@ -1,0 +1,3 @@
+OpenScrumInfoBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: OpenScrumInfoBundle:Default:index }
