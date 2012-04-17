@@ -1,0 +1,4 @@
+* Registration - Activation link (!mandatory)
+* A Team with Skill requirements matching my Skill list is gathering members (optional, default: on)
+* Application of a possible Team member (optional, recommended, default: on)
+* My application to join a team has been approved/declined (optional, default: on)
