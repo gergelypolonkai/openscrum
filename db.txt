@@ -4,7 +4,9 @@ User:
 	openid
 	google
 	facebook
-	github
+	github (is it possible?)
+	stack exchange (is it possible?)
+	yahoo
 	password (may be NULL, see username)
 	e-mail
 	skills
