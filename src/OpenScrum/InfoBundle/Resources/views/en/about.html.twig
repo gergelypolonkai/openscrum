@@ -1,0 +1,128 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<h2>About OpenScrum.org!</h2>
+
+<h3>What is OpenScrum?</h3>
+<p>OpenScrum is a tool for agile development. It is a web based tool to manage your project development.</p>
+<p>Become a Product Owner, define your Product, gather a Team, add your Ideas, and then all you need to do is to watch as your Product is being developed.</p>
+<p>Join as a developer, read the Product advertisements, apply to join a Team, split the Product Owner's Ideas into Tasks, and start developing! You get a fully functional discussion board for it.</p>
+
+<h3>What OpenScrum is not?</h3>
+
+<h4>OpenScrum is not an issue tracker</h4>
+<p>Although the product backlog can be seen as one, issues should be tracked in a separate software. For example, the OpenScrum team uses <a href="http://www.bugzilla.org/"target="_blank">Bugzilla</a> for this purpose.</p>
+
+<h4>OpenScrum is not a project planner</h4>
+<p>Although the product and sprint backlogs can be seen as one, it doesn't (and won't) provide all features of a project planner.</p>
+:wa
+
+<h3>How does it work?</h3>
+<p>The whole story is depicted on our <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'terms', '_format': 'html' }) }}#product_lifetime">Terms and Definitions</a> page.</p>
+<p>Want to see a real life example with pictures and stuff? Check out the <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'examples', '_format': 'html' }) }}">Examples</a> page!</p>
+
+<h2>Extract of the TODO file</h2>
+<p>According to the sprint length, the user story estimations and priorities, the team and the stakeholder create the backlog of the next sprint. The team will use this backlog during the sprint.</p>
+<p>However, sometimes it is required to discuss something. This can be done within the specific user story using a chat function. The sprint backlog can not be changed during a sprint, as it would change the sprint's length. Instead, in the discussion, the development of the story can be halted.  This, of course will mean that tha story will not be finished at the end of the sprint and will appear as unfinished in the review.</p>
+<p>OpenScrum also provides some help during the Daily Scrum. It provides a chat interface on which Team members can discuss the last and next day. If the Team holds the Daily Scrum in person instead, the Scrum Master should upload a brief extract of the Daily Scrum for documenting purposes. These documents are unseen by the Product Owner unless otherwise stated by the Scrum Master.</p>
+<p>During the development Team members can login anytime to see or update the status of user stories. Some parts of these updates are published to the Product Owner, so they can monitor the development's status.</p>
+<p>When the Sprint is finished, OpenScrum may come in handy for the Sprint Review, either.</p>
+
+<h3>User story sources</h3>
+
+<h4>Product backlogs</h4>
+<ul>
+	<li>customer can priorize user stories by business value</li>
+	<li>customer must refine the user story, with the aid of the team if necessary</li>
+	<li>teams can vote for actual story difficulty. Only those stories make into the product backlog, which is approved by both the customer and the team: customer simply approves (yes/no), team assigns difficulty as approval (with a successful vote)</li>
+</ul>
+
+<h4>Sprint backlogs</h4>
+<ul>
+	<li>product owner must define the title of each sprint</li>
+	<li>the team must break down the user stories into tasks</li>
+	<li>the team must set time requirement for the tasks</li>
+	<li>the tasks must have a title, a brief and long description and a time frame</li>
+	<li>chicken access to sprint backlog and task status may be disabled</li>
+</ul>
+
+<h4>Help for the daily scrum</h4>
+<ul>
+	<li>display the task states</li> 
+	<li>display the product burndown charts</li>
+	<li>the team can do the daily scrum via XMPP-based chat, integrated into the site</li>
+	<li>tasks can be moved at any given time, all charts and reports are updated real time</li>
+</ul>
+
+<h4>Sprint review</h4>
+<ul>
+	<li>at the end of a sprint, the customer can accept or decline user stories, depending on their readiness</li>
+	<li>after closing the stories, the sprint itself is closed automatically</li>
+</ul>
+
+<h4>Sprint retrospective board</h4>
+<ul>
+	<li>this is only a small blackboard, on which team members can discuss everything about the current sprint. This is only a tool to aid the scrum master during the retrospective.</li>
+</ul>
+
+<h4>Users and roles</h4>
+<ul>
+	<li>each user can be a chicken or a pig</li>
+	<li>any pig can be assigned to the special role "scrum master"</li>
+	<li>the scrum master cannot be a product owner for any products</li>
+</ul>
+
+<h4>Products</h4>
+<ul>
+	<li>each product must have exactly one product owner</li>
+	<li>all products must have a product description and may have customer information</li>
+</ul>
+
+<h4>Teams</h4>
+<ul>
+	<li>all team must have at least one member to be considered as active</li>
+	<li>product owners and the scrum master can be the member of any team</li>
+</ul>
+
+<h4>Sprints</h4>
+<ul>
+	<li>every sprint mst have a goal</li>
+	<li>at most one sprint must exist for each product at any given time</li>
+</ul>
+
+<h3>OpenScrum.org user stories</h3>
+<ul>
+	<li>as the site owner, I want unregistered users to access the information pages and public Products only</li>
+	<li>as the site owner, I can decide if I want to allow anyone to register</li>
+	<li>as a possible later Product Owner, I can register my company providing a contact e-mail address, and optionally uploading a brief description of it</li>
+	<li>as a possible Product Owner or Team member I can register myself by choosing a username and password, providing a contact e-mail address, and optionally uploding my CV with references and some details about myself</li>
+	<li>as a registered user, I am able to log in to the site using my chosen username and password</li>
+	<li>as a Product Owner I can create a new Product on behalf of my company</li>
+	<li>as a Product Owner I can create advertisement about my product to find developers for my Team</li>
+	<li>as a Product Owner I can invite developers to my Team</li>
+	<li>as a Product Owner I can choose a possible Scrum Master from my Team</li>
+	<li>as a Team member I can vote with a plus or minus on the chosen Scrum Master</li>
+	<li>as a Product Owner I can set who can add items to my Product's Idea Pool: me, the Team, or anyone</li>
+	<li>as a Product Owner, Team member or a normal registered user I can add items to the Product's Idea Pool depending on the Product's settings</li>
+	<li>as a Product Owner or Team member I can vote with a plus or a minus on the Idea Pool items depending on the Product's settings</li>
+	<li>as a Team member I can estimate the difficulty or required time for each item in the Idea Pool</li>
+	<li>as a Product Owner, I can see the difficulty or development time estimated by the Team</li>
+	<li>as a Product Owner, I can promote one of the Team members to Scrum Master</li>
+	<li>as a Team member, I can put a positive or negative vote on the promoted Scrum Master. If enough positive votes are gathered, the promoted member will become the Scrum Master. If enough negtive votes are gathered, the selected person will automatically be demoted, and the Product Owner has to promote again</li>
+	<li>as a Product Owner or a Team member (or optionally, as a regular user, if the Product is public), I can add my ideas to a Product's Idea Pool</li>
+	<li>as a Product Owner, I can see if my Product has an active Sprint</li>
+	<li>as a Team member, I can see the Idea Pool, Product Backlog and current Sprint Backlog of the Products I am assigned to</li>
+	<li>as a Team member, I can estimate the difficulty of each accepted items in the Idea Pool of every Product I am assigned to, and optionally enter the reason of my decision</li>
+	<li>as the Product Owner, I can see my Product's Idea Pool, and accept or reject them. If I accept them and the Team has estimated its difficulty and development time, it gets to the Product Backlog. For both cases, I can add some comments on my decision</li>
+	<li>as a Scrum Master of a Team, I can enable or disable access to the Sprint's details (chat logs and development boards) for the Product Owner. It should be disabled by default.</li>
+	<li>as a Product Owner, I can see the Product Backlog of my Products, and priorize the items in it</li>
+	<li>as a Product Owner, I can import tickets from an issue tracker. These issues get into the Idea Pool, so I can decide if a specific bug or Feature Request get into the Product Backlog, or will be developed/fixed in a different way</li>
+	<li>as a Product Owner, I can request the beginning of the next Sprint for my Product</li>
+	<li>as a Scrum Master of a Team, I can start the next Sprint of a Product</li>
+	<li>as the Product Owner and Scrum Master together we can decide to cancel the current Sprint of a Product, and add the reason of the cancellation</li>
+	<li>as Team members, we can divide Sprint Backlog items into tasks, predicting the required time and resources for each task</li>
+	<li>as Team members, we can discuss how a specific User Story will be developed using the chat board dedicated to that User Story</li>
+	<li>as a Team member, I can update the status of User Stories in the active Sprint Backlog I am assigned to</li>
+	<li>as the Product Owner or Team member I can see statistics and charts about my Product's past and current Sprints</li>
+	<li>as the Team, we can send back unclear Ideas to their authors to clarify things</li>
+	<li>as the Team, we can estimate a Product Backlog item as Extremely Difficult.  Such items may get back to the author of that idea to be broken down into smaller tasks, or, if we decide, we can achieve the same</li>
+{% endblock %}

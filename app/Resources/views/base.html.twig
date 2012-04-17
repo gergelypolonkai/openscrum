@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		<title>OpenScrum{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="{{ asset('skins/default/css/mobile.css') }}" media="handheld" />
+		<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
+	</head>
+	<body>
+		<h1><a href="{{ path('OpenScrumInfoBundle_homepage') }}"><img src="{{ asset('images/logo.png') }}" alt="OpenScrum.org" /></a></h1>
+		<div id="menu">
+			<ul>
+				<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'about', '_format': 'html' }) }}">About</a></li>
+				<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'terms', '_format': 'html' }) }}">Terms and Definitions</a></li>
+				<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'faq', '_format': 'html'}) }}">FAQ</a></li>
+				<li>Buy</li>
+			</ul>
+		</div>
+		{% block body %}{% endblock %}
+	</body>
 </html>

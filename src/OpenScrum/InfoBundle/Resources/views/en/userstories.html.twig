@@ -1,0 +1,67 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<h2>User Stories</h2>
+<p>These are the <a href="{{ path('OpenScrumInfoBundle_infopage', {'page': 'terms', '_format': 'html'}) }}#user_story">User Stories</a> that inspired us during the creation of the site.</p>
+
+<h3>As the Site Owner...</h3>
+<ul>
+	<li>... I want unregistered users to access the information pages and public Products only</li>
+	<li>... I can decide if I want to allow anyone to register</li>
+</ul>
+
+<h3>As a Registered User...</h3>
+<ul>
+	<li>... I am able to log in to the site using my chosen username and password</li>
+</ul>
+
+<h3>As a Product Owner...</h3>
+<ul>
+	<li>... I can register my company providing a contact e-mail address, and optionally uploading a brief description of it</li>
+	<li>... I can create a new Product on behalf of my company</li>
+	<li>... I can create advertisement about my product to find developers for my Team</li>
+	<li>... I can invite developers to my Team</li>
+	<li>... I can choose a possible Scrum Master from my Team</li>
+	<li>... I can set who can add items to my Product's Idea Pool: me, the Team, or anyone</li>
+	<li>... I can see the difficulty or development time estimated by the Team</li>
+	<li>... I can promote one of the Team members to Scrum Master</li>
+	<li>... I can see if my Product has an active Sprint</li>
+</ul>
+
+<h3>As a Team Member...</h3>
+<ul>
+	<li>... I can vote with a plus or minus on the chosen Scrum Master</li>
+	<li>... I can estimate the difficulty or required time for each item in the Idea Pool</li>
+	<li>... I can put a positive or negative vote on the promoted Scrum Master. If enough positive votes are gathered, the promoted member will become the Scrum Master. If enough negtive votes are gathered, the selected person will automatically be demoted, and the Product Owner has to promote again</li>
+</ul>
+
+<h3>As a Scrum Master...</h3>
+<ul>
+	<li>... I can enable or disable Product Owner access to sprint details</li>
+</ul>
+
+<h3>As a Product Owner or Team Member...</h3>
+<ul>
+	<li>... as a possible Product Owner or Team member I can register myself by choosing a username and password, providing a contact e-mail address, and optionally uploding my CV with references and some details about myself</li>
+• as a Product Owner or Team member I can vote with a plus or a minus on the Idea Pool items depending on the Product's settings
+</ul>
+
+<h3>As a Product Owner, Team Member or regular Registered User...</h3>
+<ul>
+	<li>... I can add items to the Product's Idea Pool depending on the Product's settings</li>
+	<li>... I can add my ideas to a Product's Idea Pool</li>
+</ul>
+
+<h3>Unsorted and needs-to-be-revised items</h3>
+<ul>
+	<li> as a team member, I can see the backlog of each products, and can vote for the difficulty of each story</li>
+	<li> as a product owner or customer, I can see the idea pool, and can accept or decline the ideas in them. If I accept them, they automatically get into the product backlog</li>
+	<li> as a product owner or customer, I can define a business value for each item in the product backlog, thus accepting them from my side</li>
+	<li> as a team member, I can vote for the difficulty of each user story in the product backlog or the idea pool with an optional reason, thus accepting them from my side</li>
+	<li> as a product owner, I can import tickets from ticketing systems. Bugs get into the product backlog, feature requests go to the idea pool</li>
+	<li> as a product owner, I can start a new sprint for my product</li>
+	<li> as a team member, I can help the product owner in creating a new speint, by dividing the user stories into tasks, predicting an hour requirements for each one</li>
+	<li> as a product owner or customer, I can edit user stories with high difficulty, so it breaks into smaller tasks, or I clear some things</li>
+	<li> as a team, we can agree on how we will solve a task, and we can add and modify these details to an open task anytime</li>
+	<li> as the scrum master, product owner, and optionally as the customer, I can see statistics and charts about my ongoing sprint</li>
+</ul>
+{% endblock body %}

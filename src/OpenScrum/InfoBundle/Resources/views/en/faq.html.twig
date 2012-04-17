@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<h2>FAQ</h2>
+<p>Before reading the FAQ, you may want to take a look at the <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'terms', '_format': 'html' }) }}">Terms and Definitions</a>.</p>
+<h3>Where can User Stories come from?</h3>
+<p>Virtually anywhere. Some examples may be:</p>
+<ul>
+	<li>
+		<h4>The owner, developers and users of the Product</h4>
+		The Product Owner will add some for sure, as he has the whole picture in his head. Of course, the Product Owner may change the Product Settings to the Team members can add their own Ideas, or, if the Product itself is for the public, it can be set up so every registered user can add items to the Idea Pool.
+	</li>
+	<li>
+		<h4>An issue tracker</h4>
+		OpenScrum.org can import bugs and features from issue trackers. This will create special user stories, which later can be revised or deleted from the Product Backlog. However, be warned that by definition, the bugs imported this way will only be fixed at the end of the next Sprint, so a better approach to this would be to fix bugs between two Sprints, or to dedicate some developers who will not work on the next Sprint, but will fix bugs instead.
+	</li>
+</ul>
+
+<h3>How long a Sprint should be?</h3>
+<p>By definition, a Sprint is a time frame between one week and a month. To decide the best value, you should ask yourself the question "How do I want to see the next version of my Product, and what does my Team say, how long does it take to develop it?".</p>
+<p>You can set a default Sprint length on the Product's configuration page. This value can be changed at the beginning of each Sprint based on the items you want to see in the Sprint Backlog.</p>
+
+<h3>Do I have to use this site? I don't think my Product can be kept secret here...</h3>
+<p>The Products you register on OpenScrum.org are private by default. This means that only you, your Team(s), and in case of emergency, our site administrators can see them. However, if you work on a top secret project, but you still want to track the development process with OpenScrum, you can buy the whole source code and run it on your own infrastructure.</p>
+<p>Buying OpenScrum will give you a one year read only access to our Git repository, so you will get all the patches and new features during that period.</p>
+
+<h3>What can I do if the development of an item in the Idea Pool takes longer than the maximum Sprint length?</h3>
+<p>The maximum length of a Sprint is one month. If the Team says developing a specific idea would be longer than a month, the person who added the Idea will be notified and asked to break down the Idea into smaller Ideas. If he does not do it, the Idea will get inactive. Of course, the Product Owner or the Team may split it into smaller parts without involving the original requestor.</p>
+
+<h3>Should I communicate with my Team as a Product Owner?</h3>
+<p>This is a decision you and your Team should make together. Some Teams don't like to be disturbed during the development, others can afford the time and human resources to inform their principals. However, OpenScrum.org provides a neat status page on which the Product Owner can follow the progress of the Sprint Backlog items, which should generally be enough for the average Product Owner.</p>
+{% endblock %}

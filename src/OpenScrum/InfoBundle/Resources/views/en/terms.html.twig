@@ -1,0 +1,64 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<h2>Terms and Definitions</h2>
+
+<h3><a name="product_lifetime"></a>Lifetime of a project</h3>
+<p>The <a href="#product">Product</a> is registered by the <a href="#product_owner">Product Owner</a>, its <a href="#idea_pool">Idea Pool</a> is filled with <a href="#idea">Ideas</a>, they get approved by the Product Owner and their difficulties get estimated by the <a href="#team">Team</a>, or get rejected by one of the parties. Approved and estimated Ideas move into the <a href="#product_backlog">Product Backlog</a> as <a href="#user_story">User Stories</a>, where they are priorized by the Product Owner. Meanwhile, the Product Owner and the Team choose a member of the Team, and promote her/him to the role of <a href="#scrum_master">Scrum Master</a>.</p>
+<p>When there are enough Ideas in the Idea Pool, the Product Owner and the Team gather in a <a href="#sprint_planning">Sprint Planning</a> meeting to plan the next <a href="#sprint">Sprint</a>. During this time, the chosen User Stories get moved to the <a href="#sprint_backlog">Sprint Backlog</a>. After this, the development of these User Stories begin. Every day, the Team gathers for a <a href="#daily_scrum">Daily Scrum</a>, to discuss what was done on the previous day, and what will be done on the next day.</p>
+<p>At the end of the Sprint, the Team and the Product Owner gathers for the <a href="#sprint_review">Sprint Review</a>, to check if the User Stories are developed successfully. User Stories are checked one by one, and the Product Owner decides if they are <a href="#definition_of_done">Done</a> or not. Done items are then moved into the increment, others are revised if necessary, and put back to the Product Backlog. After this, the increment is added to the Product, and the new version is released, if the Product Owner approves it.</p>
+<p>After this, the Team stays together, and holds the <a href="#sprint_retrospective">Sprint Retrospective</a> to discuss the whole Sprint, and decide if they have to do things different in the next Sprint.</a>
+
+<h3>Roles</h3>
+
+<h4><a name="product_owner"></a>Product Owner</h4>
+<p>The representative person of the <a href="#product">Product's</a> owning company, or the owner himself. By definition he is never part of the <a href="#team">Team</a>, so he is unable to join his own Team, unless the Product is marked Incompatible. In this case, the Product will not be fully conform with the Scrum rules.</p>
+
+<h4><a name="team"></a>Team</h4>
+<p>The Team is the person, or group of persons who actually work on the <a href="#product">Product</a>.</p>
+
+<h4><a name="scrum_master"></a>Scrum Master</h4>
+<p>A dedicated member of the <a href="#team">Team</a>, who does most of the administrative tasks here on OpenScrum.org, and does the communication between the <a href="#product_owner">Product Owner</a> and the Team. He can be, and usually is a member of the Team.</p>
+
+<h3>Events</h3>
+
+<h4><a name="sprint_planning"></a>Spring Planning</h4>
+<p></p>
+
+<h4><a name="sprint"></a></h4>
+<p></p>
+
+<h4><a name="daily_scrum"></a>Daily Scrum</h4>
+<p></p>
+
+<h4><a name="sprint_review"></a>Sprint Review</h4>
+<p></p>
+
+<h4><a name="sprint_retrospective"></a>Sprint Retrospective</h4>
+<p></p>
+
+<h3>Objects</h3>
+
+<h4><a name="product"></a>Product</h4>
+<p>The Product is something that can be developed incrementally. Most of the time it will be a software. Each Product has a <a href="#product_owner">Product Owner</a>, an <a href="#idea_pool">Idea Pool</a>, and at least one <a href="#team">Team</a>.</p>
+
+<h4><a name="idea_pool"></a>Idea Pool</h4>
+<p></p>
+
+<h4><a name="idea"></a>Idea</h4>
+<p></p>
+
+<h4><a name="product_backlog"></a>Product Backlog</h4>
+<p></p>
+
+<h4><a name="user_story"></a>User Story</h4>
+<p>A User Story is what the name suggests: a story, written by the possible users of your <a href="#product">Product</a>. It should be short, while expressing the idea as briefly as possible.</p>
+<p>Want to see the User Stories written during the creation of this site? Check our <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'userstories', '_format': 'html' }) }}">User Stories</a> page!</p>
+
+<h4><a name="sprint_backlog"></a>Spring Backlog</h4>
+<p></p>
+
+<h3>Other</h3>
+
+<h4><a name="definition_of_done"></a>Definition of Done</h4>
+<p></p>
+{% endblock %}

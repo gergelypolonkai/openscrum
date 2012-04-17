@@ -1,3 +1,17 @@
 OpenScrumInfoBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: OpenScrumInfoBundle:Default:index }
+    pattern:  /{_locale}
+    defaults:
+        _controller: OpenScrumInfoBundle:Default:infopage
+        _locale: en
+        _format: html
+        page: index
+
+OpenScrumInfoBundle_infopage:
+    pattern:  /{_locale}/info/{page}.{_format}
+    defaults:
+        _controller: OpenScrumInfoBundle:Default:infopage
+        _locale: en
+        page: about
+    requirements:
+        _format: html
+        _locale: en
