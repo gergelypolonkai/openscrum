@@ -1,0 +1,3 @@
+http://knpbundles.com/ornicar/GravatarBundle
+http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html
