@@ -1,0 +1,91 @@
+User:
+	id
+	username (may be NULL, because of possible OpenID/Google/Facebook/etc.  login)
+	openid
+	google
+	facebook
+	github
+	password (may be NULL, see username)
+	e-mail
+	skills
+
+Skill:
+	ID
+	approved?
+	short name
+	description
+
+Company:
+	ID
+	name
+	slug (must be specified during company registration, user must accept or change it; will be available at the URL /company/{slug})
+	description
+	co-worker list (list of Users with permissions)
+		ID
+		Can register Products on behalf of company?
+	contact e-mail address
+
+Product:
+	ID
+	name (short description, 100-150 characters)
+	description
+	subprojects (list of Teams)
+	Product Owner (a specific User)
+	owning company (a Company, or NULL)
+	Idea Pool (list of Ideas)
+	Product Backlog (list of UserStories)
+	sprints (list of Sprints)
+	discussion (a specific Discussion)
+
+Team:
+	ID
+	Scrum Master (a specific User)
+	members (a list of Users)
+	name
+	skill requirements (list of Skills)
+
+Idea:
+	ID
+	short description
+	long description
+	team estimated difficulties (list of Team/Difficulty pairs)
+	team estimated development times (list of Team/Time pairs)
+	author (a specific User)
+	discussion board (a specific Discussion)
+
+# UserStories are Ideas, extended with Tasks. UserStories are always created
+# from Ideas, and as such, all the fields of Ideas are copied to the UserStory
+UserStory:
+	ID
+	short description
+	long description
+	team estimated difficulties (list of Team/Difficulty pairs)
+	team estimated development times (list of Team/Time pairs)
+	author (a specific User)
+	discussion board (a specific Discussion)
+	tasks (a list of Tasks)
+
+Task:
+	ID
+	short description
+	long description
+	discussion (a specific Discussion)
+
+Sprint:
+	ID
+	start date
+	length
+	sprint goal
+	sprint backlog (a list of UserStories)
+	discussion (a specific Discussion)
+
+Discussion:
+	ID
+	messages (a list of Messages)
+
+Message:
+	ID
+	Author (a specific User)
+	timestamp with time zone
+	subject (may be NULL)
+	body
