@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+	font-family: Helvetica, Arial, sans;
+}
+
+#app-bar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #004e8a;
+	color: #c0ffff;
+	height: 32px;
+	padding: 2px;
+}
+
+#appbar-search {
+	float: left;
+}
+
+#appbar-search input {
+	width: 190px;
+}
+
+#appbar-login {
+	float: right;
+}
+
+#appbar-search input {
+	border: 0 none;
+	background-color: white;
+	height: 24px;
+}
+
+#app-bar-padding {
+	height: 40px;
+	clear: both;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+#container a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#appbar-siteinfo {
+	float: left;
+}
+
+#appbar-siteinfo a {
+	color: #c0ffff;
+}
+
+#appbar-siteinfo ul {
+	margin: 0;
+	padding: 0;
+}
+
+#appbar-siteinfo ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+#footer-wrapper {
+	display: block;
+}
+
+#footer-padding {
+	clear: both;
+	height: 40px;
+}
+
+#footer {
+	position: fixed;
+	background-color: #333;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	z-index: 70000;
+	width: 100%;
+	padding: 1em;
+	text-align: center;
+	vertical-align: center;
+	color: #ccc;
+	font-size: 10px;
+}
+
+#footer a {
+	color: #ccc;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+h1 {
+	float: none;
+	clear: both;
+}
+

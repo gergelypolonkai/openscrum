@@ -4,18 +4,39 @@
 		<meta charset="UTF-8" />
 		<title>OpenScrum{% block title %}{% endblock %}</title>
 		<link rel="stylesheet" type="text/css" href="{{ asset('skins/default/css/mobile.css') }}" media="handheld" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('skins/default/css/main.css') }}" media="screen" />
 		<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
 	</head>
 	<body>
-		<h1><a href="{{ path('OpenScrumInfoBundle_homepage') }}"><img src="{{ asset('images/logo.png') }}" alt="OpenScrum.org" /></a></h1>
-		<div id="menu">
-			<ul>
-				<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'about', '_format': 'html' }) }}">About</a></li>
-				<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'terms', '_format': 'html' }) }}">Terms and Definitions</a></li>
-				<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'faq', '_format': 'html'}) }}">FAQ</a></li>
-				<li>Buy</li>
-			</ul>
+		<div id="app-bar-wrapper">
+			<div id="app-bar">
+				<div id="appbar-siteinfo">
+					<ul>
+						<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'about', '_format': 'html' }) }}">About</a></li>
+						<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'terms', '_format': 'html' }) }}">Terms and Definitions</a></li>
+						<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'faq', '_format': 'html'}) }}">FAQ</a></li>
+						<li>Buy</li>
+					</ul>
+				</div>
+				<div id="appbar-search">
+					<input type="text" value="search box" />
+				</div>
+
+				<div id="appbar-login">
+					Sign In!
+				</div>
+			</div>
+			<div id="app-bar-padding"></div>
 		</div>
-		{% block body %}{% endblock %}
+		<div id="container">
+			<h1><a href="{{ path('OpenScrumInfoBundle_homepage') }}"><img src="{{ asset('images/logo.png') }}" alt="OpenScrum.org" /></a></h1>
+			{% block body %}{% endblock %}
+		</div>
+		<div id="footer-wrapper">
+			<div id="footer-padding"></div>
+			<div id="footer"{% if app.environment == 'dev' %} style="bottom: 40px;"{% endif %}>
+				Copyright © 2012, Gergely POLONKAI :: Privacy Policy :: <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'disclaimers', '_format': 'html' }) }}">Disclaimers</a>
+			</div>
+		</div>
 	</body>
 </html>
