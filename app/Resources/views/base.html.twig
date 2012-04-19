@@ -8,34 +8,36 @@
 		<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
 	</head>
 	<body>
-		<div id="app-bar-wrapper">
-			<div id="app-bar">
+		<div id="appbar-wrapper">
+			<div id="appbar">
+				<div id="appbar-logo">
+					<h1><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'index', '_format': 'html' }) }}"><img src="{{ asset('images/logo-small.png') }}" alt="OpenScrum.org" /></a></h1>
+				</div>
 				<div id="appbar-siteinfo">
 					<ul>
 						<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'about', '_format': 'html' }) }}">About</a></li>
 						<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'terms', '_format': 'html' }) }}">Terms and Definitions</a></li>
 						<li><a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'faq', '_format': 'html'}) }}">FAQ</a></li>
-						<li>Buy</li>
 					</ul>
-				</div>
-				<div id="appbar-search">
-					<input type="text" value="search box" />
 				</div>
 
 				<div id="appbar-login">
 					Sign In!
 				</div>
+
+				<div id="appbar-search">
+					<input type="text" value="search" /><input type="submit" value="" />
+				</div>
 			</div>
-			<div id="app-bar-padding"></div>
+			<div id="appbar-padding"></div>
 		</div>
 		<div id="container">
-			<h1><a href="{{ path('OpenScrumInfoBundle_homepage') }}"><img src="{{ asset('images/logo.png') }}" alt="OpenScrum.org" /></a></h1>
 			{% block body %}{% endblock %}
 		</div>
 		<div id="footer-wrapper">
 			<div id="footer-padding"></div>
 			<div id="footer"{% if app.environment == 'dev' %} style="bottom: 40px;"{% endif %}>
-				Copyright © 2012, Gergely POLONKAI :: Privacy Policy :: <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'disclaimers', '_format': 'html' }) }}">Disclaimers</a>
+				Copyright © 2012, Gergely POLONKAI :: <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'privacypolicy', '_format': 'html' }) }}">Privacy Policy</a> :: <a href="{{ path('OpenScrumInfoBundle_infopage', { 'page': 'disclaimers', '_format': 'html' }) }}">Disclaimers</a>
 			</div>
 		</div>
 	</body>

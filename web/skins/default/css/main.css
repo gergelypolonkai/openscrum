@@ -1,9 +1,10 @@
 body {
 	margin: 0;
 	font-family: Helvetica, Arial, sans;
+	font-size: 10pt;
 }
 
-#app-bar {
+#appbar {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -12,27 +13,85 @@ body {
 	color: #c0ffff;
 	height: 32px;
 	padding: 2px;
+	border-bottom: 1px solid #002e52;
 }
 
-#appbar-search {
+#appbar-logo {
 	float: left;
 }
 
-#appbar-search input {
-	width: 190px;
+#appbar-logo h1 {
+	margin: 0;
+}
+
+#appbar-logo img {
+	border: 0 none;
+}
+
+#appbar-siteinfo {
+	float: left;
+	position: absolute;
+	top: 36px;
+	left: 6px;
+	background-color: black;
+}
+
+#appbar-siteinfo a {
+	color: #c0ffff;
+}
+
+#appbar-siteinfo ul {
+	margin: 0;
+	padding: 0;
+}
+
+#appbar-siteinfo ul li {
+	list-style-type: none;
+}
+
+#appbar-search {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3px;
+	width: 200px;
+	height: 28px;
+	background-color: #95b5ce;
+	background-image: url('../images/search-bg.png');
+	background-repeat: no-repeat;
+}
+
+#appbar-search input[type=text] {
+	border: 0 none;
+	padding: 0;
+	width: 165px;
+	background-color: transparent;
+	margin: 3px 0 0 4px;
+}
+
+#appbar-search input[type=submit] {
+	border: 0 none;
+	background-color: transparent;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	background-image: url('../images/search-button.png');
+	margin: 3px 0 0 5px;
 }
 
 #appbar-login {
 	float: right;
+	background-color: #002e52;
+	margin: 0;
+	width: 60px;
+	height: 27px;
+	background-image: url('../images/login-button.png');
+	background-repeat: no-repeat;
+	background-position: 5px 8px;
+	padding-left: 25px;
+	padding-top: 7px;
 }
 
-#appbar-search input {
-	border: 0 none;
-	background-color: white;
-	height: 24px;
-}
-
-#app-bar-padding {
+#appbar-padding {
 	height: 40px;
 	clear: both;
 }
@@ -47,24 +106,6 @@ body {
 	color: #000;
 	font-weight: bold;
 	text-decoration: underline;
-}
-
-#appbar-siteinfo {
-	float: left;
-}
-
-#appbar-siteinfo a {
-	color: #c0ffff;
-}
-
-#appbar-siteinfo ul {
-	margin: 0;
-	padding: 0;
-}
-
-#appbar-siteinfo ul li {
-	list-style-type: none;
-	display: inline;
 }
 
 #footer-wrapper {
