@@ -1,5 +1,7 @@
 http://knpbundles.com/ornicar/GravatarBundle
 http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
 http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html
+http://knpbundles.com/FriendsOfSymfony/FOSOAuthServerBundle
+http://knpbundles.com/KnpLabs/KnpOAuthBundle
 
 http://blog.viison.com/post/15619033835/symfony2-twig-extension-switch-locale-current-route
