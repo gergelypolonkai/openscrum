@@ -10,11 +10,11 @@ class DefaultController extends Controller
     
     public function indexAction()
     {
-        return $this->render('OpenScrumInfoBundle:' . $this->get('session')->getLocale() . ':index.html.twig', array());
+        return $this->render('OpenScrumInfoBundle:' . $this->getRequest()->getLocale() . ':index.html.twig', array());
     }
 
     public function infopageAction($page)
     {
-	    return $this->render('OpenScrumInfoBundle:' . $this->get('session')->getLocale() . ':' . $page . '.html.twig', array());
+	    return $this->render('OpenScrumInfoBundle:' . $this->getRequest()->getLocale() . ':' . $page . '.html.twig', array());
     }
 }
